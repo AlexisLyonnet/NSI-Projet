@@ -1,0 +1,87 @@
+/* 
+Page de style pour le premier site en html/css.
+NSI LMD 
+Sur une idée originale de Jean-Manuel Meny et Ludovic Fasquelle
+
+*/
+
+body{
+    padding: 0%;
+    margin: 0px;
+    background-color: #DBD5B2;
+}
+
+html{
+    padding: 0%;
+    margin: 0px;
+}
+
+/* Header */
+.header{                                      
+    text-align:center;
+    background-color: #318ce7;
+    font-weight: bold;
+    width: 100%;    
+    padding: 20px;
+    color: white;
+}
+
+.titre{
+    font-size: 80px;
+}
+
+.sous-titre{
+    font-size: 30px;    
+}
+
+/* Colonnes */
+
+.colonne{
+    display: grid;
+    grid-template-columns: 1fr 2fr;        /*La colonne de droite est deux fois plus grande que celle de gauche*/
+    text-align: center;
+    margin: 20px;
+}
+
+.sub-colonne{
+    background-color: #f1f1f1;
+    border: 1px solid #002147;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*Code de base non modifié*/
+
+h1{
+    font-size: 2rem; /* 2rem = 2 fois la taille de référence, soit 40px */
+    padding-top: 1rem;  
+}
+h2{
+    font-size: 1.5rem;
+    border: 1px solid #aaa;
+    text-align:center;
+    border-radius: 20px;
+}
+p#eleve{
+    font-size: 1.5rem;
+}
+footer{
+    text-align:center;
+    margin: 2rem;
+}
+footer a{
+    
+    text-decoration: none;
+    background-color:yellow;
+    color: blue;
+    border-radius: 20px;
+    padding: 5px;
+}
