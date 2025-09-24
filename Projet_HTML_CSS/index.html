@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>NSI LMD</title>
-	<link rel="stylesheet" href="styles.css"> <!--NE PAS OUBLIE DE REMETTRE LE BON CHEMIN CSS-->
+	<link rel="stylesheet" href="css/styles.css"> <!--NE PAS OUBLIE DE REMETTRE LE BON CHEMIN CSS-->
 </head>
 
 
@@ -13,7 +13,23 @@
 		 <div class="header">
             <div class="titre">Page d'accueil</div>
             <p class="sous-titre">Un site créé par Adam Hzeg, Alexis Lyonnet et Martin Mechin</p>
+            <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pages/histoire.html">Histoire de l'informatique</a></li>
+                <li class="menu-deroulant">
+                    <a href="#">Favoris</a>
+                    <ul class="sous-menu">
+                        <li><a href="pages/favoris-LYONNET.html">Favoris Alexis</a></li>
+                        <li><a href="pages/favoris-MECHIN.html">Favoris Martin</a></li>
+                        <li><a href="pages/favoris-HZEG.html">Favoris Adam</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/sources.html">Sources</a></li>
+            </ul>
+            </nav>
         </div> 
+        
 	</header>
 
     <section>
@@ -27,7 +43,12 @@
     
    
     
-
+    <footer>
+        <div class="footer">
+            <p><a href="https://lfigp.org/fr/">Site du lycée</a></p>
+            <p>Licence d'utilisation de type <a href="https://creativecommons.org/choose/">Creative Commons</a></p>
+        </div>
+    </footer>
 	
 
 </body>
