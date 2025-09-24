@@ -1,120 +1,90 @@
-    /* 
-    Page de style pour le premier site en html/css.
-    NSI LMD 
-    Sur une idée originale de Jean-Manuel Meny et Ludovic Fasquelle
+/* === Styles de base === */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-    */
+/* === En-tête === */
+.header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
 
-    body{
-        padding: 0%;
-        margin: 0px;
-        background-color: #DBD5B2;
-    }
+.titre {
+    font-size: 32px;
+    font-weight: bold;
+}
 
-    html{
-        padding: 0%;
-        margin: 0px;
-    }
+.sous-titre {
+    font-size: 16px;
+    color: #555;
+}
 
-    /* Header */
-    .header{                                      
-        text-align:center;
-        background-color: #318ce7;
-        font-weight: bold;
-        width: 100%;    
-        padding: 20px;
-        color: white;
-    }
+/* === Menu de navigation === */
+.nav {
+    background-color: #ddd;
+    margin-top: 20px;
+}
 
+/* Menu principal en ligne */
+.nav ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrer les éléments */
+    gap: 30px; /* Espacement entre les liens */
+}
 
+/* Liens principaux */
+.nav ul.menu > li {
+    position: relative; /* Nécessaire pour le positionnement du sous-menu */
+}
 
-    .nav{
-        text-align: center;
-        background-color: #f1f1f1;
-        font-size: 10px;
-        font-weight: bold;
-        border: 2px solid #002147;
-        margin: 20px;
-        border-radius: 10px;
-    }
-    .nav a{
-        text-decoration: none;
-        color: black;
-        padding: 20px;
-        display: inline;
-    }
-    .nav a:hover{
-        background-color: #318ce7;
-        color: white;
-        border-radius: 10px;
-        border-color: #002147;
-    }
-    .nav li{
-        display: inline;
-        list-style-type: none;
-    }
+.nav ul.menu > li > a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
 
+/* Effet au survol */
+.nav ul.menu > li > a:hover {
+    background-color: #bbb;
+    color: white;
+    border-radius: 4px;
+}
 
+/* === Sous-menu === */
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Juste sous l'élément parent */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 180px;
+    z-index: 1000;
+}
 
+.sous-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
 
+.sous-menu li a:hover {
+    background-color: #eee;
+}
 
-
-    .titre{
-        font-size: 50px;
-    }
-
-    .sous-titre{
-        font-size: 20px;    
-    }
-
-    /* Colonnes */
-
-    .colonne{
-        display: grid;
-        grid-template-columns: 1fr 2fr;        /*La colonne de droite est deux fois plus grande que celle de gauche*/
-        text-align: center;
-        margin: 20px;
-    }
-
-    .sub-colonne{
-        background-color: #f1f1f1;
-        border: 1px solid #002147;
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .footer{
-        text-align:center;
-        font-size: 20px;
-        font-weight: bold;
-        color: #f1f1f1;
-        background-color: #318ce7;
-        width: 100%;    
-        padding: 10px;
-        bottom: 0;
-        left: 0;
-        position: fixed;
-    }
-
-
-
-
-
-
-    /*Code de base non modifié*/
-
-    h1{
-        font-size: 2rem; /* 2rem = 2 fois la taille de référence, soit 40px */
-        padding-top: 1rem;  
-    }
-    h2{
-        font-size: 1.5rem;
-        border: 1px solid #aaa;
-        text-align:center;
-        border-radius: 20px;
-    }
-    p#eleve{
-        font-size: 1.5rem;
-    }
-   
+/* Afficher le sous-menu au survol */
+.menu-deroulant:hover .sous-menu {
+    display: block;
+}
