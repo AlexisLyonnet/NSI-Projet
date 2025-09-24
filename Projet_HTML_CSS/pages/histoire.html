@@ -1,23 +1,141 @@
-<!DOCTYPE html>
-
-
+<!doctype html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>histoire</title>
-	<link rel="stylesheet" href="../css/styles.css">
+  <meta charset="utf-8">
+  <title>NSI — Histoire de l'informatique</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
-
 <body>
-    
-    
-	<header>
-		<h1>Histoire de l'informatique </h1>
-	</header>
 
-	 
+  <!-- l'image de fond c'est dans .header--histoire dans le CSS les amis -->
+  <header class="header header--histoire">
+    <h1>Histoire de l'informatique</h1>
+   
+  </header>
 
+  <section class="section-wrap">
+    <div class="layout">
 
- 
+      <!-- Menu commun (mêmes liens sur toutes les pages)  -->
+      <aside class="menu" aria-label="Menu principal">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a alt="Menu Histoire" href="histoire.html" aria-current="page">Histoire</a></li>
+          <li><a alt="Menu les favoris" href="favoris.html">Favoris</a></li>
+          <li><a alt="Menu les sources"  href="sources.html">Sources</a></li>
+          <li><a alt="Lien vers l'ENT" target="_blank" href="https://ent.auvergnerhonealpes.fr/">ENT</a></li>
+          <li><a alt="Lien vers le site du LFIGP" target="_blank" href="https://lfigp.org/fr/">Site de cours</a></li>
+        </ul>
+      </aside>
+
+      <!-- les grandes lignes -->
+      <main class="content">
+        <h2>Introduction</h2>
+        <p class="card">Cette page présente une courte frise chronologique et quelques repères clés de l'histoire de l'informatique. Elle met en avant des inventiions, des machines et des idées qui ont façonné nos ordinateurs actuels.</p>
+
+        <!-- frise chronologique (j'ai fait en tableau) -->
+        <h2>Frise chronologique</h2>
+        <div class="card" role="group" aria-labelledby="frise-titre">
+          <h3 id="frise-titre" class="visually-hidden">Repères de l'histoire de l'informatique</h3>
+          <table aria-label="Frise historique">
+            <thead>
+              <tr>
+                <th >Année</th>
+                <th scope="col">Événement</th>
+                <th scope="col">Pourquoi c'est important</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1936</td>
+                <td>La machine de Turing (modèle théorique)</td>
+                <td>Elle définit ce que signifie « calculer » et inspire l'ordinateur programmable.</td>
+              </tr>
+              <tr>
+                <td>1946</td>
+                <td>ENIAC</td>
+                <td>Un des premiers ordinateurs électroniques d'usage général.</td>
+              </tr>
+              <tr>
+                <td>1957</td>
+                <td>FORTRAN</td>
+                <td>Premier langage de programmation largement utilisé pour le calcul scientifique.</td>
+              </tr>
+              <tr>
+                <td>1971</td>
+                <td>Intel 4004</td>
+                <td>Premier microprocesseur commercial, miniaturisation de l'unité de calcul.</td>
+              </tr>
+              <tr>
+                <td>1989</td>
+                <td>Naissance du Web (Tim Berners-Lee)</td>
+                <td>Relie documents et ordinateurs via HTTP/HTML ; explosion d'Internet grand public.</td>
+              </tr>
+              <tr>
+                <td>2007</td>
+                <td>Émergence du smartphone moderne</td>
+                <td>Ordinateur de poche, généralisation des apps et du web mobile.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ca c'est le devlop°  -->
+        <h2>Repères et explications</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Des idées aux machines</h3>
+            <p>De la <strong>mécanique</strong> (machines à calculer) aux <strong>modèles théoriques</strong> (Turing), l'informatique naît d’abord comme une science du calcul. Les premiers ordinateurs occupent des salles entières et sont dédiés à des tâches très spécifiques.</p>
+            <figure>
+              <img src="images/histoire-mecanique.jpg" alt="Ancienne machine à calculer mécanique">
+              <figcaption>Des calculateurs mécaniques aux premiers ordinateurs électroniques.</figcaption>
+            </figure>
+          </article>
+
+          <article class="card">
+            <h3>Miniaturisation et usages</h3>
+            <p>Avec le <strong>microprocesseur</strong>, l'ordinateur devient plus petit, moins cher et plus puissant. Le <strong>Web</strong> démocratise l’information. Aujourd’hui, les <strong>smartphones</strong> combinent capteurs, réseau et logiciels, au cœur de la vie quotidienne.</p>
+            <figure>
+              <img src="images/histoire-microprocesseur.jpg" alt="Gros plan d'un microprocesseur sur une carte électronique">
+              <figcaption>La miniaturisation rend possible l'informatique personnelle et mobile.</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <!-- tqt -->
+        <h2>Notions du programme (exemples)</h2>
+        <div class="card">
+          <ul>
+            <li><strong>Architecture von Neumann</strong> : mémoire, unité de calcul, unité de contrôle, entrées/sorties.</li>
+            <li><strong>Langages</strong> : du langage machine aux langages de haut niveau (FORTRAN, C, Python…).</li>
+            <li><strong>Réseaux</strong> : Internet, protocole IP, Web (HTTP/HTML).</li>
+            <li><strong>Données</strong> : binaire, codage de l'information (texte, images, son).</li>
+          </ul>
+        </div>
+
+        <!-- ptit fiche -->
+        <h2>À retenir (à compléter)</h2>
+        <div class="card">
+          <p>Note ici 3 à 5 idées clés que tu as apprises en cours sur l'histoire de l'informatique :</p>
+          <ol>
+            <li>""</li>
+            <li>""</li>
+            <li>""</li>
+          </ol>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <!-- footer pour toutes les pages -->
+  <footer class="site">
+    <p>
+      <a href="https://www.lyc-la-martiniere-diderot.ac-lyon.fr/">Lycée La Martinière Diderot</a>
+      — Licence <a href="https://creativecommons.org/choose/">Creative Commons</a>
+    </p>
+  </footer>
+
 </body>
 </html>
