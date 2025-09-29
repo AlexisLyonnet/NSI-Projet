@@ -88,3 +88,16 @@ body {
 .menu-deroulant:hover .sous-menu {
     display: block;
 }
+
+
+.footer{
+    display: block;
+    color: #eee;
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;  
+}
