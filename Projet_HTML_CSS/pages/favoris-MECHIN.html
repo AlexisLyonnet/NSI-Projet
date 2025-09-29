@@ -10,9 +10,28 @@
 
 
 <body>
-    <header id="#top">
+    <header>
+		 <div class="header">
+            <div class="titre">Page d'accueil</div>
+            <p class="sous-titre">Un site créé par Adam Hzeg, Alexis Lyonnet et Martin Mechin</p>
+            <nav class="nav">
+            <ul class="menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="histoire.html">Histoire de l'informatique</a></li>
+                <li class="menu-deroulant">
+                    <a href="#">Favoris</a>
+                    <ul class="sous-menu">
+                        <li><a href="favoris-LYONNET.html">Favoris Alexis</a></li>
+                        <li><a href="favoris-MECHIN.html">Favoris Martin</a></li>
+                        <li><a href="favoris-HZEG.html">Favoris Adam</a></li>
+                    </ul>
+                </li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+            </nav>
+        </div> 
         
-    </header>
+	</header>
     <br>
 
     <section>
@@ -34,7 +53,7 @@
         <Ul>
             <li>Mathématiques</li>
             <li>Physique-Chimie</li>
-            <li>Numérique et Sciences de l'Informatique (laché en terminale)</li>
+            <li>Sciences de l'Ingénieur (laché en terminale)</li>
         </Ul>
     </section>
     <br>
@@ -51,8 +70,10 @@
     </section>
     <br>
 
-    <footer>
-        <a href="#top">Retour en haut</a>
-    </footer>
+     <div class="footer">
+            <a href="#top">Retour en haut</a>
+            <p><a href="https://lfigp.org/fr/" target="_blank">Site du lycée</a></p>
+            <p>Licence d'utilisation de type <a href="https://creativecommons.org/choose/" target="_blank">Creative Commons</a></p>
+    </div>
 </body>
 </html>
