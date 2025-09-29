@@ -3,15 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>NSI — Histoire de l'informatique</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
   <!-- l'image de fond c'est dans .header--histoire dans le CSS les amis -->
-  <header class="header header--histoire">
-    <h1>Histoire de l'informatique</h1>
-   
-  </header>
+  <header>
+		 <div class="header">
+            <div class="titre">Page d'accueil</div>
+            <p class="sous-titre">Un site créé par Adam Hzeg, Alexis Lyonnet et Martin Mechin</p>
+            <nav class="nav">
+            <ul class="menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="histoire.html">Histoire de l'informatique</a></li>
+                <li class="menu-deroulant">
+                    <a href="#">Favoris</a>
+                    <ul class="sous-menu">
+                        <li><a href="favoris-LYONNET.html">Favoris Alexis</a></li>
+                        <li><a href="favoris-MECHIN.html">Favoris Martin</a></li>
+                        <li><a href="favoris-HZEG.html">Favoris Adam</a></li>
+                    </ul>
+                </li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+            </nav>
+        </div> 
+        
+	</header>
 
   <section class="section-wrap">
     <div class="layout">
@@ -131,10 +149,11 @@
 
   <!-- footer pour toutes les pages -->
   <footer class="site">
-    <p>
-      <a href="https://www.lyc-la-martiniere-diderot.ac-lyon.fr/">Lycée La Martinière Diderot</a>
-      — Licence <a href="https://creativecommons.org/choose/">Creative Commons</a>
-    </p>
+     <div class="footer">
+            <a href="#top">Retour en haut</a>
+            <p><a href="https://lfigp.org/fr/" target="_blank">Site du lycée</a></p>
+            <p>Licence d'utilisation de type <a href="https://creativecommons.org/choose/" target="_blank">Creative Commons</a></p>
+    </div>
   </footer>
 
 </body>
