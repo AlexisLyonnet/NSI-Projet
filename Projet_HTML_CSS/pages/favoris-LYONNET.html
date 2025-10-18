@@ -3,78 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexis</title>
+    <title>Favoris – Alexis Lyonnet</title>
     <link rel="stylesheet" href="../css/styles.css">
-
 </head>
 
-
 <body>
+    <!-- ===================== En-tête ===================== -->
     <header>
-		 <div class="header">
-            <div class="titre">Page d'accueil</div>
-            <p class="sous-titre">Un site créé par Adam Hzeg, Alexis Lyonnet et Martin Mechin</p>
+        <div class="header">
+            <div class="titre">Page personnelle d’Alexis Lyonnet</div>
+            <p class="sous-titre">Un site créé par Adam Hzeg, Alexis Lyonnet et Martin Méchin</p>
             <nav class="nav">
-            <ul class="menu">
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="histoire.html">Histoire de l'informatique</a></li>
-                <li class="menu-deroulant">
-                    <a href="#">Favoris</a>
-                    <ul class="sous-menu">
-                        <li><a href="favoris-LYONNET.html">Favoris Alexis</a></li>
-                        <li><a href="favoris-MECHIN.html">Favoris Martin</a></li>
-                        <li><a href="favoris-HZEG.html">Favoris Adam</a></li>
-                    </ul>
-                </li>
-                <li><a href="sources.html">Sources</a></li>
-            </ul>
+                <ul class="menu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="histoire.html">Histoire de l'informatique</a></li>
+                    <li class="menu-deroulant">
+                        <a href="#">Favoris</a>
+                        <ul class="sous-menu">
+                            <li><a href="favoris-LYONNET.html">Favoris Alexis</a></li>
+                            <li><a href="favoris-MECHIN.html">Favoris Martin</a></li>
+                            <li><a href="favoris-HZEG.html">Favoris Adam</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sources.html">Sources</a></li>
+                </ul>
             </nav>
-        </div> 
-        
-	</header>
-    <br>
+        </div>
+    </header>
 
-    <section>
-        <h2>Information Personnels</h2>
-        
-        <br>
-        <img src="../images/photoprofilmartin.png" alt="Photo de Martin Méchin" style="float:right; margin-right: 20px;" width="150" height="200">
-        <p>Nom: Lyonnet</p>
-        <p>Prénom: Alexis</p>
-        <p>Classe: 1ère 2</p>
-        <p>Email: alexis.lyonnet@mylfigp.org</p>
-        <p>Téléphone: +971 58 669 1303</p>
-    </section>
-    <br>
+    <!-- ===================== Section principale ===================== -->
 
-    <section>
-        <h2>Etudes</h2>
-        <h3>Spécialité de l'année de premiére</h3>
-        <Ul>
-            <li>Mathématiques</li>
-            <li>Physique-Chimie</li>
-            <li>Numérique et sciences de l'informatique (laché en terminale)</li>
-        </Ul>
-    </section>
-    <br>
 
-    <section>
-        <h2>Loisirs</h2>
-        <h3>Activités préférées</h3>
-        <Ul>
-            <li>Badminton</li>
-            <li>Formule 1</li>
-            <li>Aeronautique</li>
-            <li>Jeux Vidéos</li>
-        </Ul>
-    </section>
-    <br>
-        
-     <footer>
+
+    <main class="layout">
+        <h1 class="titre-page">Page favoris de Alexis LYONNET</h1>
+        <div class="card profil">
+            <div class="profil-header">
+                <img src="../images/photoprofilmartin.png" alt="Photo d’Alexis Lyonnet">
+                <div class="profil-info">
+                    <h2>Informations personnelles</h2>
+                    <p><strong>Nom :</strong> Lyonnet</p>
+                    <p><strong>Prénom :</strong> Alexis</p>
+                    <p><strong>Classe :</strong> 1ère 2</p>
+                    <p><strong>Email :</strong> <a href="mailto:alexis.lyonnet@mylfigp.org">alexis.lyonnet@mylfigp.org</a></p>
+                    <p><strong>Téléphone :</strong> +971 58 669 1303</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h2>Études</h2>
+                <h3>Spécialités de première</h3>
+                <ul>
+                    <li>Mathématiques</li>
+                    <li>Physique-Chimie</li>
+                    <li>Numérique et Sciences de l’Informatique (abandonnée en terminale)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Loisirs</h2>
+                <h3>Activités préférées</h3>
+                <ul>
+                    <li>Badminton</li>
+                    <li>Formule 1</li>
+                    <li>Aéronautique</li>
+                    <li>Jeux Vidéo</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===================== Pied de page ===================== -->
+    <footer>
         <div class="footer">
-            <a href="#top">Retour en haut</a>
+            <a href="#top">⬆ Retour en haut</a>
             <p><a href="https://lfigp.org/fr/" target="_blank">Site du lycée</a></p>
-            <p>Licence d'utilisation de type <a href="https://creativecommons.org/choose/" target="_blank">Creative Commons</a></p>
+            <p>Licence d’utilisation de type <a href="https://creativecommons.org/choose/" target="_blank">Creative Commons</a></p>
         </div>
     </footer>
 </body>
