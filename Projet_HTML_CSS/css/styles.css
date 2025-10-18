@@ -1,103 +1,405 @@
-/* === Styles de base === */
+/* =========================================================
+   === Styles de base ===
+========================================================= */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Supprime les marges du navigateur */
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif; /* Police lisible et moderne */
+    background-color: #f9f9f9; 
+    color: #333; 
+    line-height: 1.6; /* Espacement vertical entre lignes */
 }
 
-/* === En-tête === */
+/* =========================================================
+   === En-tête (.header) ===
+========================================================= */
 .header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+    background: linear-gradient(135deg, #4a90e2, #0072ff); /* Dégradé bleu */
+    color: white; /* Texte blanc */
+    padding: 40px 20px; /* Espace autour du contenu */
+    text-align: center; /* Centre le texte */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); /* Ombre douce */
 }
 
 .titre {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .sous-titre {
     font-size: 16px;
-    color: #555;
+    color: #e0e0e0;
 }
 
-/* === Menu de navigation === */
+/* =========================================================
+   === Menu de navigation (.nav) ===
+========================================================= */
 .nav {
-    background-color: #ddd;
-    margin-top: 20px;
+    background-color: #fff;
+    margin-top: 25px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Menu principal en ligne */
 .nav ul.menu {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 12px 0;
     display: flex;
-    justify-content: center; /* Centrer les éléments */
-    gap: 30px; /* Espacement entre les liens */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-/* Liens principaux */
 .nav ul.menu > li {
-    position: relative; /* Nécessaire pour le positionnement du sous-menu */
+    position: relative;
 }
 
 .nav ul.menu > li > a {
     display: block;
-    padding: 12px 18px;
+    padding: 10px 18px;
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-/* Effet au survol */
 .nav ul.menu > li > a:hover {
-    background-color: #bbb;
+    background-color: #0072ff;
     color: white;
-    border-radius: 4px;
+    transform: translateY(-2px);
 }
 
-/* === Sous-menu === */
+/* =========================================================
+   === Sous-menu déroulant (.sous-menu) ===
+========================================================= */
 .sous-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Juste sous l'élément parent */
+    top: 100%; /* Aligne juste sous le lien parent */
     left: 0;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 8px 0;
     min-width: 180px;
+    border-radius: 8px;
     z-index: 1000;
 }
 
 .sous-menu li a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 16px;
     text-decoration: none;
     color: #333;
     white-space: nowrap;
+    transition: background 0.3s ease;
 }
 
 .sous-menu li a:hover {
-    background-color: #eee;
+    background-color: #f3f3f3;
 }
 
-/* Afficher le sous-menu au survol */
 .menu-deroulant:hover .sous-menu {
     display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {                                                             /*@keyframes definie l'animation d'une element en son etat initial et son etat final*/
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   === Partie principale avec Grid (.colonne) ===
+========================================================= */
+.colonne {
+    display: grid; /* mise en page en grille*/
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    gap: 30px; /* Espacement entre les colonnes et les lignes */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Centre la grille horizontalement */
+    padding: 40px 20px;
 }
 
 
-.footer{
-    display: block;
-    color: #eee;
-    background-color: #333;
+
+/* =========================================================
+   === Cartes / sous-colonnes (.sub-colonne) ===
+========================================================= */
+.sub-colonne {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.sub-colonne:hover {
+    transform: translateY(-6px); /* Légère élévation */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12); /* Ombre plus prononcée */
+}
+
+.sub-colonne h2 {
+    color: #0072ff;
+    margin-top: 0;
+}
+
+.sub-colonne p {
+    color: #555;
+    font-size: 15px;
+}
+
+.sub-colonne a {
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sub-colonne a:hover {
+    color: #0058cc;
+}
+
+/* =========================================================
+   === Pied de page (.footer) ===
+========================================================= */
+.footer {
+    background-color: #222;
+    color: #ddd;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    position: fixed;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #7bb1ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   === Mise en page principale de la page Histoire ===
+========================================================= */
+.titre-page {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.sous-titre-page {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.layout {
+    display: grid;                                  
+    grid-template-columns: 1fr;         
+    gap: 30px;                                      /* Espace entre les deux colonnes */
+    width: 95%;
+    margin: 40px auto;
+    padding: 0 20px;
+    justify-content : center; /* Centre le tableau */
+}
+
+/* =========================================================
+   === Contenu principal ===
+========================================================= */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* espace entre les sections */
+    justify-content : center; /* Centre le tableau */
+}
+
+/* =========================================================
+   === Table de la frise chronologique ===
+========================================================= */
+.card table {
     width: 100%;
-    bottom: 0;  
+    border-collapse: collapse;  /* Supprime les espaces entre cellules */
+    font-size: 15px;
+    justify-content : center; /* Centre le tableau */
+}
+
+.card th {
+    background-color: #0072ff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    justify-content : center; /* Centre le tableau */
+}
+
+.card td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 10px;
+    vertical-align: top;
+    justify-content : center; /* Centre le tableau */
+}
+
+.card tr:nth-child(even) {
+    background-color: #f9f9f9; /* Une ligne sur deux grisée */
+    justify-content : center; /* Centre le tableau */
+}
+
+/* =========================================================
+   === Zone à 2 colonnes (Repères et explications) ===
+========================================================= */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    gap: 30px;
+    justify-content : center; /* Centre le tableau */
+}
+
+/* =========================================================
+   === Cartes et images ===
+========================================================= */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content : center; /* Centre le tableau */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    justify-content : center; /* Centre le tableau */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    justify-content : center; /* Centre le tableau */
+}
+
+
+
+
+
+
+/* =========================================================
+   === Page "Favoris – Alexis" ===
+   Mise en page de la carte profil et des sections
+========================================================= */
+
+/* Carte profil principale */
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: left;
+}
+
+/* En-tête du profil avec photo + texte */
+.profil-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Image du profil */
+.profil-header img {
+    width: 180px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Texte à côté de la photo */
+.profil-info h2 {
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+.profil-info p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.profil-info a {
+    color: #0072ff;
+    text-decoration: none;
+}
+
+.profil-info a:hover {
+    text-decoration: underline;
+}
+
+/* Style uniforme des listes */
+.card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 6px;
+}
+
+/* Responsive : pour téléphone, la photo passe au-dessus du texte */
+@media (max-width: 800px) {
+    .profil-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profil-header img {
+        width: 150px;
+        height: 190px;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
 }
