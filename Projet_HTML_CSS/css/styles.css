@@ -403,3 +403,93 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   === PAGE SOURCES ===
+   Mise en forme simple et élégante
+========================================================= */
+
+/* Titre principal */
+.card h1 {
+    color: #0072ff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Paragraphe d’intro */
+.card p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Liste des sources */
+.liste-sources {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;
+    text-align: center;
+}
+
+.liste-sources li {
+    margin: 10px 0;
+}
+
+.liste-sources a {
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.liste-sources a:hover {
+    color: #0053b8;
+    text-decoration: underline;
+}
+
+/* Note explicative */
+.note {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+}
+
+
+
+
+
+
+/* ======================
+   Forcer le footer en bas
+====================== */
+
+/* Le corps de la page prend toute la hauteur */
+html, body {
+    height: 100%;
+}
+
+/* On transforme le body en "colonne flexible" */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Le contenu principal prend tout l’espace disponible */
+main, section {
+    flex: 1; /* pousse le footer vers le bas */
+}
+
+/* Le footer reste collé en bas quand il n’y a pas beaucoup de contenu */
+footer {
+    margin-top: auto;
+}
